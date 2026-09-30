@@ -25,12 +25,6 @@ Uma **fila** é uma estrutura de dados linear em que os elementos são organizad
 
 ## Estruturas de Dados: Fila, Lista e Pilha
 
-**Aluna:** Maria Eduarda Castro  
-**Curso:** Análise e Desenvolvimento de Sistemas  
-**Unidade Curricular:** Estrutura de Dados
-
-## Texto dissertativo: diferenças entre Fila, Lista e Pilha
-
 As estruturas de dados servem para organizar as informações dentro de um programa, e escolher a estrutura certa ajuda o sistema a funcionar melhor. A lista, a fila e a pilha são estruturas lineares, ou seja, os elementos ficam um depois do outro. A diferença entre elas está na forma como os dados entram, saem e são acessados.
 
 ### Definição e características

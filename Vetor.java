@@ -9,10 +9,6 @@ public class Vetor {
         final int capacidade = 20; // capacidade maxima do vetor (limite fixo)
         String[] elemento = new String[capacidade];
  
-        // Contador de quantas posicoes estao efetivamente preenchidas.
-        // Como a insercao e a exclusao deslocam os elementos, o vetor fica
-        // sempre compacto: as posicoes 0 ate quantidadeElementos - 1 estao
-        // preenchidas e as demais estao livres.
         int quantidadeElementos = 0;
  
         int opcao = 0;
@@ -60,9 +56,7 @@ public class Vetor {
  
                     case 2: {
                         // Inserir em uma posição ESPECÍFICA, deslocando para a
-                        // direita os elementos dessa posição em diante, para abrir
-                        // espaço (como um ArrayList). A posição máxima permitida é
-                        // quantidadeElementos, que equivale a inserir no final.
+                        // direita os elementos dessa posição em diante, para abrir espaço
                         if (quantidadeElementos == capacidade) {
                             System.out.println("O sistema não pode inserir mais elementos, vetor cheio.");
                             break;
@@ -79,7 +73,7 @@ public class Vetor {
                         System.out.println("Digite o elemento que deseja inserir:");
                         String resposta2 = entrada.next();
  
-                        // Desloca da direita para a esquerda para não sobrescrever
+                        // Desloca da direita p a esquerda pra não sobrescrever
                         // nenhum elemento durante o deslocamento.
                         for (int i = quantidadeElementos; i > posicao; i--) {
                             elemento[i] = elemento[i - 1];
@@ -93,16 +87,14 @@ public class Vetor {
                     }
  
                     case 3: {
-                        // Pesquisar por elemento: percorre TODA a capacidade.
+                        // Pesquisar por elemento: percorre toda a capacidade.
                         System.out.print("Digite a palavra que deseja pesquisar: ");
                         String pesquisaElemento = entrada.next();
  
                         boolean encontrado = false;
  
                         for (int i = 0; i < capacidade; i++) {
-                            // .equals chamado a partir de "pesquisaElemento" (que
-                            // nunca é null) evita NullPointerException quando
-                            // elemento[i] estiver vazio.
+                            // .equals chamado a partir de "pesquisaElemento"
                             if (pesquisaElemento.equals(elemento[i])) {
                                 System.out.println("Palavra encontrada na posição " + i);
                                 encontrado = true;
@@ -159,7 +151,7 @@ public class Vetor {
                     }
  
                     case 6: {
-                        // Excluir pela posição informada: desloca para a esquerda
+                        // Excluir pela posição informada: desloca p a esquerda
                         // os elementos seguintes, fechando o espaço vazio.
                         System.out.print("Digite a posição que deseja excluir (0 até " + (capacidade - 1) + "): ");
                         int posicaoExclusao = entrada.nextInt();
